@@ -51,31 +51,7 @@ public class Trainee
             
     }
 
-<<<<<<< HEAD
-    public String sayGreetings() {
-		
-		String greet = "No witam witam, dzien dobry" + this.name;
-        return greet; 
-	}
-
-    public boolean enter(ClassRoom ourRoom) 
-	{
-		if (ourRoomIsOpen)
-		{
-			return true;
-		}	
-		else 
-		{
-			return false;
-		}
-
-    }
-
-    public String getName ()
-    {
-=======
     public String getName () {
->>>>>>> 09e150060333d47adab127fc84a38e481509893a
         return name;
     }
 
