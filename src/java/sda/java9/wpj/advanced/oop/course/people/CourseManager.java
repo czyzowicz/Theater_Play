@@ -10,6 +10,8 @@ public class CourseManager {
 	private String email;
 	private String phoneNumber;
     private ClassRoom classRoom;
+	private ClassRoom outsideRoom;
+		
     
     public String sayGreetings() {
         String greet = "Witajcie na kursie Java";
@@ -62,11 +64,23 @@ public class CourseManager {
         this.classRoom = room;
         room.setCourseManager(this);
     }
+	
+	public void exitRoom(ClassRoom outsideRoom)
+	{
+		this.classRoom = outsideRoom;
+		outsideRoom.setCourseManager(this);
+		
+	}
     
     public String sayCourseInfo(Course course) {
         return "Witacie, to jest kurs " + course.getTitle() + ". Co mogę powiedzieć o kursie? " + course.getShortDescription();
     }
     
+	public ClassRoom getOutsideRoom() 
+	{
+        return outsideRoom;
+    }
+	
     public ClassRoom getRoom() {
         return classRoom;
     }

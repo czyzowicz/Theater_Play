@@ -5,8 +5,8 @@ import sda.java9.wpj.advanced.oop.course.people.Trainer;
 public class CourseBlock {
     
     private String title;
-    private String shortDescription;
-    private String longDescription;
+    private String technicalInformation;
+    private String overallInformation;
     private String[] slides;
     private Trainer trainer;
     
@@ -14,12 +14,12 @@ public class CourseBlock {
         return title;
     }
     
-    public String getShortDescription() {
-        return shortDescription;
+    public String getTechnicalInformation() {
+        return technicalInformation;
     }
     
-    public String getLongDescription() {
-        return longDescription;
+    public String getOverallInformation() {
+        return overallInformation;
     }
     
     public String[] getSlides() {
@@ -34,12 +34,12 @@ public class CourseBlock {
         this.title = title;
     }
     
-    public void setShortDescription(String shortDescription) {
-        this.shortDescription = shortDescription;
+    public void setTechnicalInformation(String technicalInformation) {
+        this.technicalInformation = technicalInformation;
     }
     
-    public void setLongDescription(String longDescription) {
-        this.longDescription = longDescription;
+    public void setOverallInformation(String overallInformation) {
+        this.overallInformation = overallInformation;
     }
     
     public void setSlides(String[] slides) {

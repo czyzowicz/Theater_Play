@@ -13,7 +13,7 @@ public class ClassRoom {
 	private Trainee[] trainees;
 	private Trainer trainer;
 	private boolean isOpen; 
-    
+	    
 	public void addTrainee(Trainee trainee){
 		Boolean added = false;
 		for (int i = 0; i < this.trainees.length; i++){

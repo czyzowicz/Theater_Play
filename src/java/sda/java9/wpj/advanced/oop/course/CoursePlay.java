@@ -14,7 +14,12 @@ public class CoursePlay {
      * z 3 aktów.
      */
     public static void main(String[] args) {
-        
+        System.out.println("");
+		System.out.println("------------------------------------------------");
+		System.out.println("SCENA PIERWSZA");
+		System.out.println("------------------------------------------------");
+		System.out.println("");
+		
         /* 1. Pojawia się pierwszy Uczestnik kursu. 
          *
          * Hint:
@@ -171,7 +176,7 @@ public class CoursePlay {
         stageDirections("Jaki trener jest w pokoju? " + ourRoom.getTrainer());
         say("Trener", theTrainer.sayGreetings());
         
-        /* 10. Uczestnicy wybierają Ławki i Krzesła, siadają.
+        /* 10. Uczestnicy wybierają ławki i Krzesła, siadają.
          *
          * Hint:
          * Teraz potrzebujemy zapełnić obiekt sali szkoleniowej (ourRoom)
@@ -188,8 +193,7 @@ public class CoursePlay {
          * czy może powinny one powstać gdzie indzie? Np. ... w konstruktorze klasy ClassRoom?
          */
          
-         
-        // TODO
+                
          
 		 
 		 
@@ -207,13 +211,59 @@ public class CoursePlay {
         sdaJava.setTitle("Java");
         sdaJava.setShortDescription("Kurs Java uczy kodowania, programowania i rozwiązywania problemów!");
         say("Menedżer", manager.sayCourseInfo(sdaJava));
-    }
+    
+	
+		/*12. Trener opowiada o Kursie, przedstawia informacje techniczne
+		*
+		*/
+		
+		sdaJava.setLongDescription("Bedziemy się uczyć o wielu ciekawych rzecaczh takich jak : " +
+		 "tablice, petle, warunki, programowanie obiektowe, wyjątki itd.");
+		say("Trener", theTrainer.sayCourseTechnicalInfo(sdaJava));
+	
+		/*13. Trener opowiada o Blokach kursu, które prowadzi – przedstawia informacje ogólne i techniczne
+		*
+		*/
+		CourseBlock wprowadzenieDoJava = new CourseBlock();
+		wprowadzenieDoJava.setTechnicalInformation("Informajce techniczne.");
+		wprowadzenieDoJava.setOverallInformation("Informacje ogólne.");
+		say("Trener", theTrainer.sayCourseWprowadzenieDoJavaInfo(wprowadzenieDoJava));
+		
+		
+		System.out.println("------------------------------------------------");
+		System.out.println("KONIEC SCENY PIERWSZEJ");
+		System.out.println("------------------------------------------------");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("------------------------------------------------");
+		System.out.println("SCENA DRUGA");
+		System.out.println("------------------------------------------------");
+		
+		/*1. Trener ogłasza przerwę
+		*
+		*/
+		
+		sdaJava.setCourseBreak("15 minut przerwy");
+		say("Trener", theTrainer.sayBreak(sdaJava));
+		
+		/*2. Menedżer kursu opuszcza Salę i Kurs.
+		*
+		*/
+		
+		manager.exitRoom(ourRoom);
+		stageDirections("Sala, w której jest menedżer: " + manager.getOutsideRoom());
+		
+		/*3. Uczestnicy wstają i wychodzą z Sali.
+		*
+		*/
+		
+	}
     
     private static void stageDirections(String msg) {
         System.out.println("====> Didaskalia\n" + msg + "\n====");
     }
     
     private static void say(String who, String what) {
-        System.out.println(who + ": \n" + "    \"" + what + "\"");
+        System.out.println(" \n" + who + ": \n" + "    \"" + what + "\"");
     }
 }

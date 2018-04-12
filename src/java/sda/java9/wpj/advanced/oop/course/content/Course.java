@@ -10,7 +10,14 @@ public class Course {
     private String longDescription;
     private Trainee[] trainies;
     private CourseBlock[] blocks;
+	private String courseBreak;
     
+	
+	public String getCourseBreak() 
+	{
+        return courseBreak;
+    }
+	
     public String getTitle() {
         return title;
     }
@@ -29,6 +36,10 @@ public class Course {
     
     public CourseBlock[] getBlocks() {
         return blocks;
+    }
+	
+	public void setCourseBreak (String courseBreak) {
+        this.courseBreak = courseBreak;
     }
     
     public void setTitle(String title) {

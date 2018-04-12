@@ -1,6 +1,7 @@
 package sda.java9.wpj.advanced.oop.course.people;
 
 import sda.java9.wpj.advanced.oop.course.rooms.*;
+import sda.java9.wpj.advanced.oop.course.content.*;
 
 public class Trainer {
     
@@ -29,6 +30,25 @@ public class Trainer {
         return greet;
     }
     
+	public String sayCourseTechnicalInfo(Course course)
+	{
+		return "Ja od siebie mogą dodać trochę dokładniej, że " + course.getLongDescription();
+	}
+	
+	public String sayCourseWprowadzenieDoJavaInfo (CourseBlock courseBlock)
+	{
+		return "Wypada bym przedstawił wam także dokładniejsze informacje o blokach kursu, które bedziemy przerabiać: " +
+		courseBlock.getOverallInformation() + " " + courseBlock.getTechnicalInformation();
+	}
+	
+	public String sayBreak (Course courseBreak)
+	{
+	return "Zsynchronizujmy zegarki. Teraz czas na " + courseBreak.getCourseBreak();
+	}
+	
+	
+		
+	
     public Trainer() {}
     
     public Trainer(String name) {
